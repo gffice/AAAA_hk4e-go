@@ -178,3 +178,60 @@ services:
         limits:
           cpus: '1.00'
           memory: 512M
+
+  nats-server:
+    restart: always
+    image: nats
+    container_name: nats
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+      - "6222:6222"
+    environment:
+      TZ: Asia/Shanghai
+      GOLANG_PROTOBUF_REGISTRATION_CONFLICT: ignore
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - /etc/timezone:/etc/timezone
+    deploy:
+      resources:
+        limits:
+          cpus: '1.00'
+          memory: 1024M
+
+  mongo-server:
+    restart: always
+    image: mongo
+    container_name: mongo
+    ports:
+      - "27017:27017"
+      
+    environment:
+      TZ: Asia/Shanghai
+      GOLANG_PROTOBUF_REGISTRATION_CONFLICT: ignore
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - /etc/timezone:/etc/timezone
+    deploy:
+      resources:
+        limits:
+          cpus: '1.00'
+          memory: 1024M
+
+  redis-server:
+    restart: always
+    image: redis
+    container_name: redis
+    ports:
+      - "6379:6379"
+    environment:
+      TZ: Asia/Shanghai
+      GOLANG_PROTOBUF_REGISTRATION_CONFLICT: ignore
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - /etc/timezone:/etc/timezone
+    deploy:
+      resources:
+        limits:
+          cpus: '1.00'
+          memory: 1024M
