@@ -98,7 +98,7 @@ func NewDiscoveryService(db *dao.Dao, messageQueue *mq.MessageQueue) (*Discovery
 		logger.Error("load stop server info from db error: %v", err)
 		return nil, err
 	}
-	if stopServerInfo != nil {
+	if stopServerInfo == nil {
 		logger.Info("init stop server info")
 		stopServerInfo = &dao.StopServerInfo{
 			StopServer:      true,
