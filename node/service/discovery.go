@@ -99,6 +99,12 @@ func NewDiscoveryService(db *dao.Dao, messageQueue *mq.MessageQueue) (*Discovery
 		return nil, err
 	}
 	if stopServerInfo == nil {
+		logger.Info("init no stop server info")
+		stopServerInfo = &dao.StopServerInfo{
+			StopServer:      false,
+		}
+	}
+	if stopServerInfo == nil {
 		logger.Info("init stop server info")
 		stopServerInfo = &dao.StopServerInfo{
 			StopServer:      true,
