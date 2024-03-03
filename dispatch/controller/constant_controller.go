@@ -31,7 +31,7 @@ func (c *Controller) check(ctx *gin.Context) {
 		_, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"id\":\"c8820f246a5241ab9973f71df3ddd791\",\"action\":\"\",\"geetest\":{\"challenge\":\"\",\"gt\":\"\",\"new_captcha\":0,\"success\":1}}}")
 	} else {
 		// Android
-		_, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"id\":\"2b35f1421d4a4c7c9183184c6190027e\",\"action\":\"ACTION_GEETEST\",\"geetest\":{\"challenge\":\"\",\"gt\":\"\",\"new_captcha\":0,\"success\":1}}}")
+		_, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"id\":\"2b35f1421d4a4c7c9183184c6190027e\",\"action\":\"ACTION_GEETEST\",\"geetest\":nell}}")
 	}
 }
 
