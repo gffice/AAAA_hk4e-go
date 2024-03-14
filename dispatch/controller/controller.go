@@ -121,11 +121,15 @@ func (c *Controller) registerRouter() {
 		engine.GET("/hk4e_:name/mdk/agreement/api/getAgreementInfos", c.getAgreementInfos)
 		engine.POST("/hk4e_:name/combo/granter/api/compareProtocolVersion", c.postCompareProtocolVersion)
 		engine.POST("/account/risky/api/check", c.check)
+		engine.GET("/hk4e_:name/combo/granter/api/compareProtocolVersion", c.postCompareProtocolVersion)
+		engine.GET("/account/risky/api/check", c.check)
 		engine.GET("/combo/box/api/config/sdk/combo", c.combo)
 		engine.GET("/hk4e_:name/combo/granter/api/getConfig", c.getConfig)
 		engine.GET("/hk4e_:name/mdk/shield/api/loadConfig", c.loadConfig)
 		engine.POST("/data_abtest_api/config/experiment/list", c.list)
+		engine.GET("/data_abtest_api/config/experiment/list", c.list)
 		// Android
+		
 		engine.POST("/common/h5log/log/batch", c.batch)
 		engine.GET("/hk4e_:name/combo/granter/api/getFont", c.getFont)
 	}
