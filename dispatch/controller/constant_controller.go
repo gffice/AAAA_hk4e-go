@@ -19,8 +19,8 @@ func (c *Controller) getAgreementInfos(ctx *gin.Context) {
 // POST https://hk4e-sdk-os.hoyoverse.com/hk4e_global/combo/granter/api/compareProtocolVersion? HTTP/1.1
 func (c *Controller) postCompareProtocolVersion(ctx *gin.Context) {
 	ctx.Header("Content-type", "application/json")
-	// _, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"modified\":true,\"protocol\":{\"id\":0,\"app_id\":4,\"language\":\"zh-cn\",\"user_proto\":\"\",\"priv_proto\":\"\",\"major\":35,\"minimum\":0,\"create_time\":\"0\",\"teenager_proto\":\"\",\"third_proto\":\"\",\"full_priv_proto\":\"\"}}}")
-	_, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"modified\":true,\"protocol\":{\"id\":0,\"app_id\":4,\"language\":\"en\",\"user_proto\":\"\",\"priv_proto\":\"\",\"major\":7,\"minimum\":0,\"create_time\":\"0\",\"teenager_proto\":\"\",\"third_proto\":\"\"}}}")
+	_, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"modified\":true,\"protocol\":{\"id\":0,\"app_id\":4,\"language\":\"zh-cn\",\"user_proto\":\"\",\"priv_proto\":\"\",\"major\":35,\"minimum\":0,\"create_time\":\"0\",\"teenager_proto\":\"\",\"third_proto\":\"\",\"full_priv_proto\":\"\"}}}")
+	//_, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"modified\":true,\"protocol\":{\"id\":0,\"app_id\":4,\"language\":\"en\",\"user_proto\":\"\",\"priv_proto\":\"\",\"major\":7,\"minimum\":0,\"create_time\":\"0\",\"teenager_proto\":\"\",\"third_proto\":\"\"}}}")
 }
 
 // POST https://api-account-os.hoyoverse.com/account/risky/api/check? HTTP/1.1
@@ -33,9 +33,9 @@ func (c *Controller) check(ctx *gin.Context) {
 	} else {
 		// Android
 		// _, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"id\":\"2b35f1421d4a4c7c9183184c6190027e\",\"action\":\"ACTION_GEETEST\",\"geetest\":{\"challenge\":\"616018607b6940f52fbd349004038686\",\"gt\":\"16bddce04c7385dbb7282778c29bba3e\",\"new_captcha\":1,\"success\":1}}}")
-		//_, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"id\":\"none\",\"action\":\"ACTION_NONE\",\"geetest\":null}}")
+		_, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"id\":\"none\",\"action\":\"ACTION_NONE\",\"geetest\":null}}")
 		// _, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"id\":\"2b35f1421d4a4c7c9183184c6190027e\",\"action\":\"ACTION_GEETEST\",\"geetest\":null}}")
-		_, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"id\":\"c8820f246a5241ab9973f71df3ddd791\",\"action\":\"\",\"geetest\":{\"challenge\":\"\",\"gt\":\"\",\"new_captcha\":0,\"success\":1}}}")
+		//_, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"id\":\"c8820f246a5241ab9973f71df3ddd791\",\"action\":\"\",\"geetest\":{\"challenge\":\"\",\"gt\":\"\",\"new_captcha\":0,\"success\":1}}}")
 	}
 }
 
@@ -51,9 +51,9 @@ func (c *Controller) combo(ctx *gin.Context) {
 		_, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"vals\":{\"disable_email_bind_skip\":\"false\",\"email_bind_remind_interval\":\"7\",\"network_report_config\":\"{ \\\"enable\\\": 1, \\\"status_codes\\\": [206], \\\"url_paths\\\": [\\\"dataUpload\\\"] }\",\"kibana_pc_config\":\"{ \\\"enable\\\": 1, \\\"level\\\": \\\"Info\\\",\\\"modules\\\": [\\\"download\\\"]\",\"kcp_enable\":\"false\",\"pay_payco_centered_host\":\"bill.payco.com\",\"list_price_tierv2_enable\":\"false\",\"email_bind_remind\":\"true\"}}}")
 	case "2":
 		// Android
-		// _, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"vals\":{\"enable_bind_google_sdk_order\":\"false\",\"email_bind_remind_interval\":\"7\",\"email_bind_remind\":\"true\",\"list_price_tierv2_enable\":\"false\\n\",\" network_report_config\":\"{\\n        \\\"enable\\\": 1,\\n        \\\"status_codes\\\": [],\\n        \\\"url_paths\\\": [\\\"/dataUpload\\\",\\\"combo/postman/device/setAlias\\\"]\\n}\",\"enable_attribution\":\"true\",\"h5log_config\":\" { \\\"enable\\\": 1, \\\"level\\\": \\\"Debug\\\" } \",\"disable_email_bind_skip\":\"false\",\"report_black_list\":\"{\\\"key\\\":[\\\"download_update_progress\\\"]}\"}}}")
+		_, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"vals\":{\"enable_bind_google_sdk_order\":\"false\",\"email_bind_remind_interval\":\"7\",\"email_bind_remind\":\"true\",\"list_price_tierv2_enable\":\"false\\n\",\" network_report_config\":\"{\\n        \\\"enable\\\": 1,\\n        \\\"status_codes\\\": [],\\n        \\\"url_paths\\\": [\\\"/dataUpload\\\",\\\"combo/postman/device/setAlias\\\"]\\n}\",\"enable_attribution\":\"true\",\"h5log_config\":\" { \\\"enable\\\": 1, \\\"level\\\": \\\"Debug\\\" } \",\"disable_email_bind_skip\":\"false\",\"report_black_list\":\"{\\\"key\\\":[\\\"download_update_progress\\\"]}\"}}}")
 		//_, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"vals\":{\"disable_email_bind_skip\":\"false\",\"email_bind_remind_interval\":\"7\",\"email_bind_remind\":\"true\"}}}")
-		_, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"vals\":{\"disable_email_bind_skip\":\"false\",\"email_bind_remind_interval\":\"7\",\"network_report_config\":\"{ \\\"enable\\\": 1, \\\"status_codes\\\": [206], \\\"url_paths\\\": [\\\"dataUpload\\\"] }\",\"kibana_pc_config\":\"{ \\\"enable\\\": 1, \\\"level\\\": \\\"Info\\\",\\\"modules\\\": [\\\"download\\\"]\",\"kcp_enable\":\"false\",\"pay_payco_centered_host\":\"bill.payco.com\",\"list_price_tierv2_enable\":\"false\",\"email_bind_remind\":\"true\"}}}")
+		//_, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"vals\":{\"disable_email_bind_skip\":\"false\",\"email_bind_remind_interval\":\"7\",\"network_report_config\":\"{ \\\"enable\\\": 1, \\\"status_codes\\\": [206], \\\"url_paths\\\": [\\\"dataUpload\\\"] }\",\"kibana_pc_config\":\"{ \\\"enable\\\": 1, \\\"level\\\": \\\"Info\\\",\\\"modules\\\": [\\\"download\\\"]\",\"kcp_enable\":\"false\",\"pay_payco_centered_host\":\"bill.payco.com\",\"list_price_tierv2_enable\":\"false\",\"email_bind_remind\":\"true\"}}}")
 	case "1":
 		// IOS
 		_, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"vals\":{\"enable_bind_google_sdk_order\":\"false\",\"email_bind_remind_interval\":\"7\",\"email_bind_remind\":\"true\",\"list_price_tierv2_enable\":\"false\\n\",\" network_report_config\":\"{\\n        \\\"enable\\\": 1,\\n        \\\"status_codes\\\": [],\\n        \\\"url_paths\\\": [\\\"/dataUpload\\\",\\\"combo/postman/device/setAlias\\\"]\\n}\",\"enable_attribution\":\"true\",\"h5log_config\":\" { \\\"enable\\\": 1, \\\"level\\\": \\\"Debug\\\" } \",\"disable_email_bind_skip\":\"false\",\"report_black_list\":\"{\\\"key\\\":[\\\"download_update_progress\\\"]}\"}}}")
