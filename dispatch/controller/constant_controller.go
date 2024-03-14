@@ -19,7 +19,8 @@ func (c *Controller) getAgreementInfos(ctx *gin.Context) {
 // POST https://hk4e-sdk-os.hoyoverse.com/hk4e_global/combo/granter/api/compareProtocolVersion? HTTP/1.1
 func (c *Controller) postCompareProtocolVersion(ctx *gin.Context) {
 	ctx.Header("Content-type", "application/json")
-	_, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"modified\":true,\"protocol\":{\"id\":0,\"app_id\":4,\"language\":\"zh-cn\",\"user_proto\":\"\",\"priv_proto\":\"\",\"major\":35,\"minimum\":0,\"create_time\":\"0\",\"teenager_proto\":\"\",\"third_proto\":\"\",\"full_priv_proto\":\"\"}}}")
+	// _, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"modified\":true,\"protocol\":{\"id\":0,\"app_id\":4,\"language\":\"zh-cn\",\"user_proto\":\"\",\"priv_proto\":\"\",\"major\":35,\"minimum\":0,\"create_time\":\"0\",\"teenager_proto\":\"\",\"third_proto\":\"\",\"full_priv_proto\":\"\"}}}")
+	_, _ = ctx.Writer.WriteString("{\"retcode\":0,\"message\":\"OK\",\"data\":{\"modified\":true,\"protocol\":{\"id\":0,\"app_id\":4,\"language\":\"en\",\"user_proto\":\"\",\"priv_proto\":\"\",\"major\":7,\"minimum\":0,\"create_time\":\"0\",\"teenager_proto\":\"\",\"third_proto\":\"\"}}}")
 }
 
 // POST https://api-account-os.hoyoverse.com/account/risky/api/check? HTTP/1.1
